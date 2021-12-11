@@ -11,16 +11,6 @@ void buble_sort(int *array, int length)
     }
 }
 
-void generate_sorted_array(int* array, int length)
-{
-    int num = 0;
-    for(int i = 0; i < length; ++i)
-    {
-        num += random(1, 5);
-        array[i] = num;
-    }
-}
-
 /*
 6. Дан массив размера N, все элементы которого, кроме одного, упорядочены по
 убыванию. Сделать массив упорядоченным, переместив элемент, нарушающий
@@ -42,7 +32,6 @@ void Task6()
 
     int array[N];
     randomize_array(array, N, 10, 29);
-    //generate_sorted_array(array, N);
     buble_sort(array, N);
 
     int i1 = random(0, N - 1);

@@ -1,5 +1,9 @@
-.vscode
+#######
+.vscode/*
+!.vscode/settings.json
+
 build
+#######
 
 # Prerequisites
 *.d
