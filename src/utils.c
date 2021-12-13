@@ -56,15 +56,21 @@ int scan_int(char *message, int min)
 void print_array(int *array, int length)
 {
     printf("| ");
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < length; ++i)
         printf("%d ", array[i]);
     printf("|");
 }
 
 void randomize_array(int *array, int length, int min, int max)
 {
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < length; ++i)
         array[i] = random(min, max);
+}
+
+void randomize_matrix(int **matrix, int M, int N, int min, int max)
+{
+    for (int i = 0; i < M; ++i)
+        randomize_array(matrix[i], N, min, max);
 }
 
 int random(int min, int max)

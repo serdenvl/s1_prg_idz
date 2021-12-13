@@ -33,10 +33,8 @@ void Task7()
     // [строка][столбец]
     int *matrix[M];
     for (int i = 0; i < M; ++i)
-    {
         matrix[i] = malloc(sizeof(int) * N);
-        randomize_array(matrix[i], N, 10, 29);
-    }
+    randomize_matrix(matrix, M, N, 10, 29);
 
     printf("\nСлучайная матрица:\n");
     for (int i = 0; i < M; ++i)
