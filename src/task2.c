@@ -25,7 +25,7 @@ void Task2()
     welcome(num_task, welcome_message);
 
     int N = scan_int("\nДлина набора: ", 0);
-
+    
     int sequence[N+1];
     randomize_array(sequence, N, 10, 39);
     sequence[N] = 0;

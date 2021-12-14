@@ -2,9 +2,6 @@
 
 int max_neighs(int* array, int length)
 {
-    if(length < 2)
-        return -1;
-
     int ix = 0;
     for(int i = 1; i < length-1; ++i)
         ix = ((array[ix]+array[ix+1]) < (array[i]+array[i+1])) ? i : ix;
