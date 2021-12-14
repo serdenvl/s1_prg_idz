@@ -67,7 +67,7 @@ void randomize_array(int *array, int length, int min, int max)
         array[i] = random(min, max);
 }
 
-void randomize_matrix(int **matrix, int M, int N, int min, int max)
+void randomize_matrix(int M, int N, int matrix[M][N], int min, int max)
 {
     for (int i = 0; i < M; ++i)
         randomize_array(matrix[i], N, min, max);

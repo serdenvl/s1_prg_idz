@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-void maxs_columns(int *matrix[], int M, int N, int buff[])
+void maxs_columns(int M, int N, int matrix[M][N], int buff[])
 {
     for (int i = 0; i < N; ++i)
         buff[i] = matrix[0][i];
@@ -31,10 +31,8 @@ void Task7()
     int N = scan_int("N: ", 1);
 
     // [строка][столбец]
-    int *matrix[M];
-    for (int i = 0; i < M; ++i)
-        matrix[i] = malloc(sizeof(int) * N);
-    randomize_matrix(matrix, M, N, 10, 29);
+    int matrix[M][N];
+    randomize_matrix(M, N, matrix, 10, 29);
 
     printf("\nСлучайная матрица:\n");
     for (int i = 0; i < M; ++i)
@@ -44,12 +42,8 @@ void Task7()
     }
 
     int maxs[N];
-    randomize_array(maxs, N, 0, 1);
-    maxs_columns(matrix, M, N, maxs);
+    maxs_columns(M, N, matrix, maxs);
 
     printf("\nМаксиумы столбцов:\n");
     print_array(maxs, N);
-
-    for (int i = 0; i < M; ++i)
-        free(matrix[i]);
 }
