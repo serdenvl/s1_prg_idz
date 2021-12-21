@@ -27,7 +27,7 @@ void Task1()
     int N = scan_int("N: ", 0);
 
     int array[N]; 
-    randomize_array(array, N, 20, 29);
+    randomize_array(array, N, 120, 129);
     printf("\nСлучайный набор: ");
     print_array(array, N);
 

@@ -27,7 +27,7 @@ void Task2()
     int N = scan_int("\nДлина набора: ", 0);
     
     int sequence[N+1];
-    randomize_array(sequence, N, 10, 39);
+    randomize_array(sequence, N, -5, 5);
     sequence[N] = 0;
 
     printf("\nСлучайный набор: ");

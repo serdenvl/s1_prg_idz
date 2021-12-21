@@ -27,7 +27,7 @@ void Task3()
     for(int i = 0; i < K; ++i)
     {
         sequences[i] = malloc(sizeof(int)*lens[i]);
-        randomize_array(sequences[i], lens[i], 10, 29);
+        randomize_array(sequences[i], lens[i], -10, 10);
         sequences[i][lens[i]-1] = 0;
     }
 
